@@ -1,0 +1,13 @@
+# IPS ve IDS
+
+IPS (Intrusion preventation systems), izinsiz giriş önleme sistemleri ve IDS (Intrusion detection systems) izinsiz giriş tespit etme sistemleri ağ güvenlğinde kullandığımız bir başka sistemlerdir. İki sistemde imzaları kullanarak zararlı trafikleri tespit eder. İmza, bir IDS veya IPS'nin kötü amaçlı etkinliği tespit etmek için kullandığı bir dizi kuraldır. İmzalar, ciddi güvenlik ihlallerini tespit etmek, yaygın ağ saldırılarını tespit etmek ve bilgi toplamak için kullanılabilir. Sisteme sensör şeklinde implemete edilirler. Paket veya bir trafik kesitini inceleyebilirler.  IDS ve IPS teknolojileri, atomik imza modellerini (tek paket) veya bileşik imza modellerini (çoklu paket) algılayabilir. 
+
+IDS sistemleri sisteme paralel bir şekilde yerleştirilir. Trafiğin bir kopyasını alıp inceler. Bir sorunla karşılaşırsa alarm üretir. Konfigürasyonu yapılmışsa güvenlik duvarına bu sorunla ilgili kural yazdırıp trafiği engelleyebilir veya bir TCP trafiğiyse RST biti ile bu trafiği kesebilir. Bu şekilde konfigüre edilmesi ve yönetilmesi zor olduğundan sadece tespit sistemi olarak kullanılır. Ağ içinde kopya trafik aldığından ağ performansını etkilemez ve eğer arıza yaşarsa trafik üzerinden akmadığı için ağı etkilemez. 
+
+IPS sistemlerinde trafik IPS üzerinden akar. IPS sistemi zararlı trafiği direk olarak engelleyebilme olanağına sahiptir. IPS sensörleri sıralı olduğundan akış normalleştirmeyi kullanabilirler. Akış normalleştirme, saldırı birden fazla veri segmenti üzerinde gerçekleştiğinde veri akışını yeniden yapılandırmak için kullanılan bir tekniktir. Trafik üzerinden aktığı için eğer bir arıza meydana gelirse ağ performansını etkiler hatta ağ iletişimini durdurabilir.
+
+Bu teknolojilerden birinin kullanılması diğerinin kullanımını ortadan kaldırmaz. Aslında IDS ve IPS teknolojileri birbirini tamamlayabilir.
+
+Örneğin, IDS daha derin paket incelemesi için yapılandırılabildiğinden, IPS işlemini doğrulamak için bir IDS uygulanabilir. Bu, IPS'nin hat içinde daha az ancak daha kritik trafik modellerine odaklanmasını sağlar.
+
+## IPS Türleri
